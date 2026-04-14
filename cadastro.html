@@ -1,0 +1,76 @@
+<!-- Página de Cadastro/Login Moderna -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro - Fast Aid</title>
+  <link rel="stylesheet" href="style/style.css"/>
+</head>
+<body>
+
+   <a href="index.html" class="btn-voltar">
+    <img src="images/seta.png" alt="Voltar">
+  </a>
+
+  <div class="logocima">
+    <img src="images/logo.png" alt="Fast Aid Logo">
+     <p id="titulofooter">Fast Aid</p>
+  </div>
+
+  <section class="form">
+
+
+<div class="formcard">
+<h1>Crie sua conta</h1>
+
+
+<form novalidate>
+<div class="inp">
+<label>Nome completo</label>
+<input type="text" id="nome" required pattern="^[A-Za-zÀ-ÿ ]+$" placeholder="Digite seu nome" maxlength="50"/>
+<span class="erro"></span>
+</div>
+
+
+<div class="inp">
+<label>E-mail</label>
+<input type="email" id="email" required placeholder="seuemail@gmail.com" maxlength="50"/>
+<span class="erro"></span>
+</div>
+
+
+<div class="inp">
+<label>Telefone</label>
+<input type="tel" id="telefone" required placeholder="(00) 00000-0000" maxlength="15"/>
+<span class="erro"></span>
+</div>
+
+
+<div class="inp">
+<label>Senha</label>
+<input type="password" id="senha" required placeholder="Mínimo 6 caracteres" />
+<span class="erro"></span>
+</div>
+
+<div class="inp">
+  <label>Confirmar senha</label>
+  <input type="password" id="confirmarSenha" required placeholder="Digite novamente a senha" />
+  <span class="erro"></span>
+</div>
+
+
+<button class="btn">Cadastrar</button>
+</form>
+
+
+<p class="linklogin">Já possui uma conta? <a href="login.html">Entrar</a></p>
+</div>
+
+
+</section>
+
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>
