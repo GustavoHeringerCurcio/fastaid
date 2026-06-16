@@ -4,118 +4,118 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Fast Aid — Aprenda primeiros socorros</title>
-  <link rel="stylesheet" href="style/style.css">
-
-
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <div class="site">
-    <header>
-      <div id="logohome">
+<body class="font-[Arial,sans-serif] text-[#222] overflow-x-hidden scroll-smooth">
+  <div class="max-w-[1400px] mx-auto p-5 max-lg:p-4 max-md:p-3 max-[480px]:p-[10px]">
+    <header class="flex justify-between items-center py-5 gap-[18px] max-md:flex-row max-md:flex-wrap max-md:items-center max-md:justify-between max-md:py-[14px] max-md:gap-3">
+      <div id="logohome" class="flex items-center gap-[10px] max-md:flex-[1_1_auto] max-md:min-w-0">
         <a href="index.html">
-        <div class="logo-container">
-            <img src="images/logo.png" alt="Logo First Aid" class="logo-img">
+          <div class="flex items-center gap-[10px]">
+            <img src="images/logo.png" alt="Logo First Aid" class="w-10 h-10 max-[480px]:w-[34px] max-[480px]:h-[34px]">
+          </div>
         </a>
-        </div>
-        <p class="site-title">Fast Aid </p>
+        <p class="text-[22px] font-bold max-lg:text-[20px] max-md:text-[18px] max-[480px]:text-[18px]">Fast Aid</p>
       </div>
 
-      <button class="hamburger" type="button">
-        <span></span><span></span><span></span>
+      <button class="hamburger hidden max-md:flex max-md:flex-[0_0_auto] w-11 h-11 border border-[#ddd] rounded-[10px] bg-white cursor-pointer p-0 items-center justify-center flex-col gap-[6px] z-20" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <span class="w-[22px] h-[2px] bg-[#333] block transition-all duration-300 ease-in-out"></span>
+        <span class="w-[22px] h-[2px] bg-[#333] block transition-all duration-300 ease-in-out"></span>
+        <span class="w-[22px] h-[2px] bg-[#333] block transition-all duration-300 ease-in-out"></span>
       </button>
 
-      <nav id="main-nav" class="main-nav" aria-label="Menu principal">
-        <a href="index.html">Início</a>
-        <a href="#">Sobre</a>
-        <a href="#" id="header1">Contato</a>
-        <a href="cadastro.html" class="cadastro">Cadastrar-se</a>
-        <a href="login.html">Fazer login</a>
+      <nav id="main-nav" class="main-nav flex items-center gap-5 max-md:flex-col max-md:items-center max-md:gap-0 max-md:p-[14px] max-md:bg-white max-md:rounded-[12px] max-md:shadow-[0_10px_24px_rgba(0,0,0,0.08)] max-md:mt-[2px] max-md:invisible max-md:opacity-0 max-md:translate-y-[-10px] max-md:pointer-events-none max-md:transition-all max-md:duration-300 max-md:ease-in-out" aria-label="Menu principal">
+        <a href="index.html" class="no-underline text-[#333] text-base max-md:w-full max-md:text-center max-md:text-sm max-md:py-2">Início</a>
+        <a href="#" class="no-underline text-[#333] text-base max-md:w-full max-md:text-center max-md:text-sm max-md:py-2">Sobre</a>
+        <a href="#" class="no-underline text-[#333] text-base max-md:w-full max-md:text-center max-md:text-sm max-md:py-2">Contato</a>
+        <a href="cadastro.html" class="ml-auto bg-[#ff4d4d] text-white px-[14px] py-2 rounded-[8px] no-underline text-base max-md:ml-0 max-md:bg-transparent max-md:text-[#333] max-md:p-0 max-md:rounded-none max-md:font-normal max-md:w-full max-md:text-center max-md:text-sm max-md:py-2">Cadastrar-se</a>
+        <a href="login.html" class="no-underline text-[#333] text-base max-md:w-full max-md:text-center max-md:text-sm max-md:py-2">Fazer login</a>
       </nav>
     </header>
 
     <main>
-      <section class="sec1" aria-labelledby="hero-heading">
-        <div class="conteudo">
-          <h1>Aprenda primeiros socorros</h1>
-          <p class="p1">Informações acessíveis sobre como agir em situações de emergência — passo a passo, recursos visuais e consulta rápida.</p>
-          <a class="btn1" href="#emergencias">Saiba mais ›</a>
+      <section class="flex items-center justify-between py-[60px] gap-[30px] max-lg:flex-col max-lg:items-start max-lg:py-[45px] max-md:py-[30px] max-md:gap-5" aria-labelledby="hero-heading">
+        <div class="w-1/2 max-lg:w-full">
+          <h1 id="hero-heading" class="text-[52px] leading-[1.1] my-5 max-lg:text-[40px] max-md:text-[32px] max-[480px]:text-[26px]">Aprenda primeiros socorros</h1>
+          <p class="text-lg text-[#444] mb-[22px] max-w-[400px] max-lg:max-w-none max-lg:text-[17px] max-md:text-base">Informações acessíveis sobre como agir em situações de emergência — passo a passo, recursos visuais e consulta rápida.</p>
+          <a class="inline-block bg-[#ff4d4d] text-white px-[22px] py-[14px] rounded-[10px] no-underline text-lg max-md:text-base max-md:px-[18px] max-md:py-3 max-[480px]:w-full max-[480px]:text-center" href="#emergencias">Saiba mais ›</a>
         </div>
 
-        <div class="imgpessoa">
-          <img src="images/imagemrcp.png" alt="pessoa realizando rcp">
+        <div class="max-lg:w-full max-lg:flex max-lg:justify-center">
+          <img src="images/imagemrcp.png" alt="pessoa realizando rcp" class="w-[580px] max-w-full max-lg:w-[min(580px,100%)]">
         </div>
       </section>
 
-      <section id="emergencias" class="section">
-        <h2 id="tituloemergencia">Emergências em Destaque</h2>
+      <section id="emergencias" class="py-[60px] max-md:py-10">
+        <h2 class="text-[32px] mb-6 max-md:text-[26px]">Emergências em Destaque</h2>
 
-        <div class="cards">
-          <article class="card">
-            <img class="icones" src="images/rcp.png" alt="">
-            <h3>RCP</h3>
-            <a href="rcp.html">Ver mais</a>
+        <div class="grid grid-cols-4 gap-5 mb-10 max-lg:grid-cols-2 max-md:grid-cols-1 max-md:gap-[14px] max-md:justify-items-center">
+          <article class="bg-white rounded-[12px] p-5 border border-[#eee] text-left transition-[0.25s_ease] cursor-pointer max-lg:w-full max-md:w-full max-md:max-w-[360px] max-md:text-center max-[480px]:p-4 hover:-translate-y-[6px] hover:shadow-[0_10px_25px_rgba(0,0,0,0.08)]">
+            <img class="w-[55px] text-[30px] mb-[10px] max-md:mx-auto max-md:mb-[10px]" src="images/rcp.png" alt="">
+            <h3 class="text-[20px] mb-[6px]">RCP</h3>
+            <a href="rcp.html" class="text-[15px] text-[#ff4d4d] no-underline">Ver mais</a>
           </article>
 
-          <article class="card">
-            <img class="icones" src="images/convulsao.png" alt="">
-            <h3>Convulsão</h3>
-            <a href="convulsao.html">Ver mais</a>
+          <article class="bg-white rounded-[12px] p-5 border border-[#eee] text-left transition-[0.25s_ease] cursor-pointer max-lg:w-full max-md:w-full max-md:max-w-[360px] max-md:text-center max-[480px]:p-4 hover:-translate-y-[6px] hover:shadow-[0_10px_25px_rgba(0,0,0,0.08)]">
+            <img class="w-[55px] text-[30px] mb-[10px] max-md:mx-auto max-md:mb-[10px]" src="images/convulsao.png" alt="">
+            <h3 class="text-[20px] mb-[6px]">Convulsão</h3>
+            <a href="convulsao.html" class="text-[15px] text-[#ff4d4d] no-underline">Ver mais</a>
           </article>
 
-          <article class="card">
-            <img class="icones" src="images/queimadura.png" alt="">
-            <h3>Queimaduras</h3>
-            <a href="#">Ver mais</a>
+          <article class="bg-white rounded-[12px] p-5 border border-[#eee] text-left transition-[0.25s_ease] cursor-pointer max-lg:w-full max-md:w-full max-md:max-w-[360px] max-md:text-center max-[480px]:p-4 hover:-translate-y-[6px] hover:shadow-[0_10px_25px_rgba(0,0,0,0.08)]">
+            <img class="w-[55px] text-[30px] mb-[10px] max-md:mx-auto max-md:mb-[10px]" src="images/queimadura.png" alt="">
+            <h3 class="text-[20px] mb-[6px]">Queimaduras</h3>
+            <a href="#" class="text-[15px] text-[#ff4d4d] no-underline">Ver mais</a>
           </article>
 
-          <article class="card">
-            <img class="icones" src="images/traumas.png" alt="">
-            <h3>Traumas</h3>
-            <a href="#">Ver mais</a>
+          <article class="bg-white rounded-[12px] p-5 border border-[#eee] text-left transition-[0.25s_ease] cursor-pointer max-lg:w-full max-md:w-full max-md:max-w-[360px] max-md:text-center max-[480px]:p-4 hover:-translate-y-[6px] hover:shadow-[0_10px_25px_rgba(0,0,0,0.08)]">
+            <img class="w-[55px] text-[30px] mb-[10px] max-md:mx-auto max-md:mb-[10px]" src="images/traumas.png" alt="">
+            <h3 class="text-[20px] mb-[6px]">Traumas</h3>
+            <a href="#" class="text-[15px] text-[#ff4d4d] no-underline">Ver mais</a>
           </article>
 
-           <article class="card">
-            <img class="icones" src="images/cortesesangramentos.png" alt="">
-            <h3>Cortes e Sangramentos</h3>
-            <a href="#">Ver mais</a>
+          <article class="bg-white rounded-[12px] p-5 border border-[#eee] text-left transition-[0.25s_ease] cursor-pointer max-lg:w-full max-md:w-full max-md:max-w-[360px] max-md:text-center max-[480px]:p-4 hover:-translate-y-[6px] hover:shadow-[0_10px_25px_rgba(0,0,0,0.08)]">
+            <img class="w-[55px] text-[30px] mb-[10px] max-md:mx-auto max-md:mb-[10px]" src="images/cortesesangramentos.png" alt="">
+            <h3 class="text-[20px] mb-[6px]">Cortes e Sangramentos</h3>
+            <a href="#" class="text-[15px] text-[#ff4d4d] no-underline">Ver mais</a>
           </article>
 
-             <article class="card">
-            <img class="icones" src="images/choqueeletrico.png" alt="">
-            <h3>Choque Elétrico</h3>
-            <a href="#">Ver mais</a>
+          <article class="bg-white rounded-[12px] p-5 border border-[#eee] text-left transition-[0.25s_ease] cursor-pointer max-lg:w-full max-md:w-full max-md:max-w-[360px] max-md:text-center max-[480px]:p-4 hover:-translate-y-[6px] hover:shadow-[0_10px_25px_rgba(0,0,0,0.08)]">
+            <img class="w-[55px] text-[30px] mb-[10px] max-md:mx-auto max-md:mb-[10px]" src="images/choqueeletrico.png" alt="">
+            <h3 class="text-[20px] mb-[6px]">Choque Elétrico</h3>
+            <a href="#" class="text-[15px] text-[#ff4d4d] no-underline">Ver mais</a>
           </article>
 
-             <article class="card">
-            <img class="icones" src="images/afogamento.png" alt="">
-            <h3 id="c7">Afogamento</h3>
-            <a href="#">Ver mais</a>
+          <article class="bg-white rounded-[12px] p-5 border border-[#eee] text-left transition-[0.25s_ease] cursor-pointer max-lg:w-full max-md:w-full max-md:max-w-[360px] max-md:text-center max-[480px]:p-4 hover:-translate-y-[6px] hover:shadow-[0_10px_25px_rgba(0,0,0,0.08)]">
+            <img class="w-[55px] text-[30px] mb-[10px] max-md:mx-auto max-md:mb-[10px]" src="images/afogamento.png" alt="">
+            <h3 id="c7" class="text-[20px] mb-[6px]">Afogamento</h3>
+            <a href="#" class="text-[15px] text-[#ff4d4d] no-underline">Ver mais</a>
           </article>
 
-             <article class="card" role="listitem" aria-labelledby="c2">
-            <img class="icones" src="images/desmaio.png" alt="">
-            <h3 id="c8">Desmaio</h3>
-            <a href="#">Ver mais</a>
+          <article class="bg-white rounded-[12px] p-5 border border-[#eee] text-left transition-[0.25s_ease] cursor-pointer max-lg:w-full max-md:w-full max-md:max-w-[360px] max-md:text-center max-[480px]:p-4 hover:-translate-y-[6px] hover:shadow-[0_10px_25px_rgba(0,0,0,0.08)]" role="listitem" aria-labelledby="c2">
+            <img class="w-[55px] text-[30px] mb-[10px] max-md:mx-auto max-md:mb-[10px]" src="images/desmaio.png" alt="">
+            <h3 id="c8" class="text-[20px] mb-[6px]">Desmaio</h3>
+            <a href="#" class="text-[15px] text-[#ff4d4d] no-underline">Ver mais</a>
           </article>
         </div>
 
-        <div style="margin-top:36px;">
-          <h2>Como funciona?</h2>
-          <div class="comofunciona">
-            <div class="passo">
-              <div class="num">1</div>
+        <div class="mt-9">
+          <h2 class="text-[32px] mb-6 max-md:text-[26px]">Como funciona?</h2>
+          <div class="flex gap-10 mt-5 flex-wrap justify-center max-lg:gap-5 max-md:flex-col max-md:gap-4">
+            <div class="text-center w-[180px] max-lg:w-[calc(50%-10px)] max-lg:min-w-[220px] max-md:w-full max-md:min-w-0">
+              <div class="w-[42px] h-[42px] bg-[#ff4d4d] text-white rounded-full flex items-center justify-center mx-auto mb-[10px] font-bold text-lg">1</div>
               <strong>Escolha a emergência</strong>
               <div>Selecione o tipo de incidente</div>
             </div>
 
-            <div class="passo">
-              <div class="num">2</div>
+            <div class="text-center w-[180px] max-lg:w-[calc(50%-10px)] max-lg:min-w-[220px] max-md:w-full max-md:min-w-0">
+              <div class="w-[42px] h-[42px] bg-[#ff4d4d] text-white rounded-full flex items-center justify-center mx-auto mb-[10px] font-bold text-lg">2</div>
               <strong>Veja as instruções</strong>
               <div>Passo a passo claro e direto</div>
             </div>
 
-            <div class="passo">
-              <div class="num">3</div>
+            <div class="text-center w-[180px] max-lg:w-[calc(50%-10px)] max-lg:min-w-[220px] max-md:w-full max-md:min-w-0">
+              <div class="w-[42px] h-[42px] bg-[#ff4d4d] text-white rounded-full flex items-center justify-center mx-auto mb-[10px] font-bold text-lg">3</div>
               <strong>Salve vidas</strong>
               <div>Aja rápido e com segurança</div>
             </div>
@@ -124,29 +124,27 @@
       </section>
     </main>
 
-    <footer>
-      <img src="images/logo.png" alt="Logo First Aid" id="logofooter">
-      <div>
-        <strong>Fast Aid</strong>
-        <div class="textofooter">Informações básicas sobre primeiros socorros. Em caso de emergência, ligue 192 (SAMU).</div>
+    <footer class="grid grid-cols-[auto_1fr_auto] items-center gap-[30px] mt-[60px] p-6 max-lg:gap-5 max-md:mt-10 max-md:flex max-md:flex-col max-md:text-center max-md:gap-0">
+      <img src="images/logo.png" alt="Logo First Aid" class="w-[120px] h-[120px] -mt-[5px] max-lg:w-[95px] max-lg:h-[95px] max-md:mx-auto max-md:mb-2">
+      <div class="max-md:w-full max-md:py-[14px]">
+        <strong id="titulofooter" class="text-[22px] font-bold max-md:text-[20px]">Fast Aid</strong>
+        <div class="max-w-[420px] mt-[6px] text-[#555] max-md:mx-auto">Informações básicas sobre primeiros socorros. Em caso de emergência, ligue 192 (SAMU).</div>
       </div>
 
-      <div>
-
-        <a href="#">fastaid@gmail.com</a>
-        <div class="social">
-      <a href="#" class="iconesocial">
-       <img src="images/logoinsta.png" alt="logo instagram">
-    </a>
-
-    <a href="#" class="iconesocial">
-    <img src="images/logoface.png" alt="logo facebook">
-    
-    </a>
-</div>
+      <div class="justify-self-end text-right max-md:justify-self-center max-md:text-center max-md:w-full max-md:py-[14px] max-md:border-t border-[#e8e8e8]">
+        <a href="#" class="text-[#ff4d4d] no-underline hover:underline">fastaid@gmail.com</a>
+        <div class="flex gap-5 mt-[10px] justify-end max-lg:justify-start max-md:justify-center">
+          <a class="w-12 h-12 bg-[#ff4d4d] text-white flex items-center justify-center rounded-[12px] text-[22px] transition-[0.3s_ease] hover:scale-[1.08]" href="#">
+            <img src="images/logoinsta.png" alt="logo instagram" class="w-[38px]">
+          </a>
+          <a class="w-12 h-12 bg-[#ff4d4d] text-white flex items-center justify-center rounded-[12px] text-[22px] transition-[0.3s_ease] hover:scale-[1.08]" href="#">
+            <img src="images/logoface.png" alt="logo facebook" class="w-[38px]">
+          </a>
+        </div>
       </div>
     </footer>
   </div>
+  <div class="hidden max-md:visible max-md:opacity-100 max-md:translate-y-0 max-md:pointer-events-auto rotate-45 -rotate-45 translate-y-[8px] -translate-y-[8px] opacity-0"></div>
   <script src="scripts/menu.js" defer></script>
 </body>
 </html>

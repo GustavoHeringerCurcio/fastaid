@@ -4,93 +4,103 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Convulsão - Fast Aid</title>
-  <link rel="stylesheet" href="style/style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-
-<body>
-
-  <div class="site">
-    <header>
-      <div id="logohome">
+<body class="font-[Arial,sans-serif] text-[#222] overflow-x-hidden scroll-smooth">
+  <div class="max-w-[1400px] mx-auto p-5 max-lg:p-4 max-md:p-3 max-[480px]:p-[10px]">
+    <header class="flex justify-between items-center py-5 gap-[18px] max-md:flex-row max-md:flex-wrap max-md:items-center max-md:justify-between max-md:py-[14px] max-md:gap-3">
+      <div class="flex items-center gap-[10px] max-md:flex-[1_1_auto] max-md:min-w-0">
         <a href="index.html">
-        <div class="logo-container">
-            <img src="images/logo.png" alt="Logo First Aid" class="logo-img">
+          <div class="flex items-center gap-[10px]">
+            <img src="images/logo.png" alt="Logo First Aid" class="w-10 h-10 max-[480px]:w-[34px] max-[480px]:h-[34px]">
+          </div>
         </a>
-        </div>
-        <p class="site-title">Fast Aid </p>
+        <p class="text-[22px] font-bold max-lg:text-[20px] max-md:text-[18px] max-[480px]:text-[18px]">Fast Aid</p>
       </div>
 
-      <button class="hamburger" type="button">
-        <span></span><span></span><span></span>
+      <button class="hamburger hidden max-md:flex max-md:flex-[0_0_auto] w-11 h-11 border border-[#ddd] rounded-[10px] bg-white cursor-pointer p-0 items-center justify-center flex-col gap-[6px] z-20" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <span class="w-[22px] h-[2px] bg-[#333] block transition-all duration-300 ease-in-out"></span>
+        <span class="w-[22px] h-[2px] bg-[#333] block transition-all duration-300 ease-in-out"></span>
+        <span class="w-[22px] h-[2px] bg-[#333] block transition-all duration-300 ease-in-out"></span>
       </button>
 
-      <nav id="main-nav" class="main-nav">
-        <a href="index.html">Início</a>
-        <a href="#">Sobre</a>
-        <a href="#" id="header1">Contato</a>
-        <a href="cadastro.html" class="cadastro">Cadastrar-se</a>
-        <a href="login.html">Fazer login</a>
+      <nav id="main-nav" class="main-nav flex items-center gap-5 max-md:flex-col max-md:items-center max-md:gap-0 max-md:p-[14px] max-md:bg-white max-md:rounded-[12px] max-md:shadow-[0_10px_24px_rgba(0,0,0,0.08)] max-md:mt-[2px] max-md:invisible max-md:opacity-0 max-md:translate-y-[-10px] max-md:pointer-events-none max-md:transition-all max-md:duration-300 max-md:ease-in-out">
+        <a href="index.html" class="no-underline text-[#333] text-base max-md:w-full max-md:text-center max-md:text-sm max-md:py-2">Início</a>
+        <a href="#" class="no-underline text-[#333] text-base max-md:w-full max-md:text-center max-md:text-sm max-md:py-2">Sobre</a>
+        <a href="#" class="no-underline text-[#333] text-base max-md:w-full max-md:text-center max-md:text-sm max-md:py-2">Contato</a>
+        <a href="cadastro.html" class="ml-auto bg-[#ff4d4d] text-white px-[14px] py-2 rounded-[8px] no-underline text-base max-md:ml-0 max-md:bg-transparent max-md:text-[#333] max-md:p-0 max-md:rounded-none max-md:font-normal max-md:w-full max-md:text-center max-md:text-sm max-md:py-2">Cadastrar-se</a>
+        <a href="login.html" class="no-underline text-[#333] text-base max-md:w-full max-md:text-center max-md:text-sm max-md:py-2">Fazer login</a>
       </nav>
     </header>
 
-    <div id="logorcp">
-      <img src="images/convulsao.png">
+    <div class="text-center mt-[25px] mb-[10px] flex justify-center items-center">
+      <img src="images/convulsao.png" class="w-[120px] m-[30px] -mb-5 max-md:w-[95px] max-md:m-[22px] max-md:-mb-[10px]">
     </div>
 
-    <section class="containeremergencia">
-      <h1 class="titulo">Convulsão</h1>
-      <p class="subtitulo">Siga o passo a passo abaixo:</p>
+    <section class="max-w-[900px] mx-auto py-10 px-5 text-center max-md:py-[30px] max-md:px-3">
+      <h1 class="text-[32px] mb-[10px] max-lg:text-[27px] max-md:text-2xl">Convulsão</h1>
+      <p class="text-base mb-[35px] text-[#555] max-md:text-[15px] max-md:mb-[22px]">Siga o passo a passo abaixo:</p>
 
-      <div class="passos">
-
-        <div class="cardpasso">
-          <img src="images/convulsao1.png" class="imgpasso" alt="">
-          <h3>1. Mantenha a calma</h3>
-          <p>Fique tranquilo e observe a situação. A maioria das convulsões dura poucos minutos.</p>
+      <div class="flex flex-col gap-[22px] max-md:gap-4">
+        <div class="bg-white rounded-[12px] p-[18px] shadow-[0_4px_12px_rgba(0,0,0,0.08)] text-left flex gap-5 items-center max-md:flex-col max-md:items-center max-md:text-center max-md:gap-3 max-md:p-4">
+          <img src="images/convulsao1.png" class="w-20 max-md:w-[90px] max-[480px]:w-[76px]" alt="">
+          <div>
+            <h3 class="text-[20px] mb-[6px]">1. Mantenha a calma</h3>
+            <p class="text-[#444]">Fique tranquilo e observe a situação. A maioria das convulsões dura poucos minutos.</p>
+          </div>
         </div>
 
-        <div class="cardpasso">
-          <img src="images/convulsao2.png" class="imgpasso" alt="">
-          <h3>2. Proteja a pessoa</h3>
-          <p>Afaste objetos ao redor para evitar que a pessoa se machuque.</p>
+        <div class="bg-white rounded-[12px] p-[18px] shadow-[0_4px_12px_rgba(0,0,0,0.08)] text-left flex gap-5 items-center max-md:flex-col max-md:items-center max-md:text-center max-md:gap-3 max-md:p-4">
+          <img src="images/convulsao2.png" class="w-20 max-md:w-[90px] max-[480px]:w-[76px]" alt="">
+          <div>
+            <h3 class="text-[20px] mb-[6px]">2. Proteja a pessoa</h3>
+            <p class="text-[#444]">Afaste objetos ao redor para evitar que a pessoa se machuque.</p>
+          </div>
         </div>
 
-        <div class="cardpasso">
-          <img src="images/convulsao3.png" class="imgpasso" alt="">
-          <h3>3. Apoie a cabeça</h3>
-          <p>Coloque algo macio sob a cabeça da pessoa para evitar impactos.</p>
+        <div class="bg-white rounded-[12px] p-[18px] shadow-[0_4px_12px_rgba(0,0,0,0.08)] text-left flex gap-5 items-center max-md:flex-col max-md:items-center max-md:text-center max-md:gap-3 max-md:p-4">
+          <img src="images/convulsao3.png" class="w-20 max-md:w-[90px] max-[480px]:w-[76px]" alt="">
+          <div>
+            <h3 class="text-[20px] mb-[6px]">3. Apoie a cabeça</h3>
+            <p class="text-[#444]">Coloque algo macio sob a cabeça da pessoa para evitar impactos.</p>
+          </div>
         </div>
 
-        <div class="cardpasso">
-          <img src="images/convulsao4.png" class="imgpasso" alt="">
-          <h3>4. Não segure a pessoa</h3>
-          <p>Não tente impedir os movimentos. Isso pode causar lesões.</p>
+        <div class="bg-white rounded-[12px] p-[18px] shadow-[0_4px_12px_rgba(0,0,0,0.08)] text-left flex gap-5 items-center max-md:flex-col max-md:items-center max-md:text-center max-md:gap-3 max-md:p-4">
+          <img src="images/convulsao4.png" class="w-20 max-md:w-[90px] max-[480px]:w-[76px]" alt="">
+          <div>
+            <h3 class="text-[20px] mb-[6px]">4. Não segure a pessoa</h3>
+            <p class="text-[#444]">Não tente impedir os movimentos. Isso pode causar lesões.</p>
+          </div>
         </div>
 
-        <div class="cardpasso">
-          <img src="images/convulsao5.png" class="imgpasso" alt="">
-          <h3>5. Não coloque nada na boca</h3>
-          <p>Nunca coloque objetos ou dedos na boca da pessoa.</p>
+        <div class="bg-white rounded-[12px] p-[18px] shadow-[0_4px_12px_rgba(0,0,0,0.08)] text-left flex gap-5 items-center max-md:flex-col max-md:items-center max-md:text-center max-md:gap-3 max-md:p-4">
+          <img src="images/convulsao5.png" class="w-20 max-md:w-[90px] max-[480px]:w-[76px]" alt="">
+          <div>
+            <h3 class="text-[20px] mb-[6px]">5. Não coloque nada na boca</h3>
+            <p class="text-[#444]">Nunca coloque objetos ou dedos na boca da pessoa.</p>
+          </div>
         </div>
 
-        <div class="cardpasso">
-          <img src="images/convulsao6.png" class="imgpasso" alt="">
-          <h3>6. Após a convulsão</h3>
-          <p>Coloque a pessoa de lado (posição lateral) e verifique a respiração.</p>
+        <div class="bg-white rounded-[12px] p-[18px] shadow-[0_4px_12px_rgba(0,0,0,0.08)] text-left flex gap-5 items-center max-md:flex-col max-md:items-center max-md:text-center max-md:gap-3 max-md:p-4">
+          <img src="images/convulsao6.png" class="w-20 max-md:w-[90px] max-[480px]:w-[76px]" alt="">
+          <div>
+            <h3 class="text-[20px] mb-[6px]">6. Após a convulsão</h3>
+            <p class="text-[#444]">Coloque a pessoa de lado (posição lateral) e verifique a respiração.</p>
+          </div>
         </div>
 
-        <div class="cardpasso">
-          <img src="images/convulsao7.png" class="imgpasso" alt="">
-          <h3>7. Chame ajuda se necessário</h3>
-          <p>Ligue 192 se a convulsão durar mais de 5 minutos ou se for a primeira vez.</p>
+        <div class="bg-white rounded-[12px] p-[18px] shadow-[0_4px_12px_rgba(0,0,0,0.08)] text-left flex gap-5 items-center max-md:flex-col max-md:items-center max-md:text-center max-md:gap-3 max-md:p-4">
+          <img src="images/convulsao7.png" class="w-20 max-md:w-[90px] max-[480px]:w-[76px]" alt="">
+          <div>
+            <h3 class="text-[20px] mb-[6px]">7. Chame ajuda se necessário</h3>
+            <p class="text-[#444]">Ligue 192 se a convulsão durar mais de 5 minutos ou se for a primeira vez.</p>
+          </div>
         </div>
-
       </div>
-
     </section>
-
   </div>
-
+  <div class="hidden max-md:visible max-md:opacity-100 max-md:translate-y-0 max-md:pointer-events-auto rotate-45 -rotate-45 translate-y-[8px] -translate-y-[8px] opacity-0"></div>
   <script src="scripts/menu.js" defer></script>
 </body>
 </html>

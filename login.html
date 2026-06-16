@@ -4,50 +4,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login - Fast Aid</title>
-  <link rel="stylesheet" href="style/style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-
-   <a href="index.html" class="btn-voltar">
-    <img src="images/seta.png" alt="Voltar">
+<body class="font-[Arial,sans-serif]">
+  <a href="index.html" class="absolute top-[25px] left-[25px] bg-[#ff4d4d] p-[10px] rounded-[12px] flex items-center justify-center transition-[0.2s] hover:scale-[1.07] max-md:static max-md:m-3 max-md:w-fit max-md:p-2 max-md:rounded-[10px] max-[480px]:p-2 max-[480px]:rounded-[10px]">
+    <img src="images/seta.png" alt="Voltar" class="w-[35px] max-md:w-[30px] max-[480px]:w-[26px]">
   </a>
 
-  <div class="logocima">
-    <img src="images/logo.png" alt="Fast Aid Logo">
-     <p id="titulofooter">Fast Aid</p>
+  <div class="text-center mt-[25px] mb-[10px] flex justify-center items-center gap-[15px] max-md:mt-1 max-md:mb-3 max-md:gap-[10px]">
+    <img src="images/logo.png" alt="Fast Aid Logo" class="w-[59px] mb-[5px] max-md:w-[46px]">
+    <strong class="text-[22px] font-bold max-md:text-[20px]">Fast Aid</strong>
   </div>
 
-  <section class="form">
+  <section class="w-full min-h-screen flex items-center justify-center p-5 -mt-[70px] max-md:mt-0 max-md:p-3">
+    <div class="bg-white w-full max-w-[420px] px-10 py-[35px] rounded-[20px] shadow-[0_6px_18px_rgba(0,0,0,0.08)] border border-[#eee] max-md:px-5 max-md:py-6">
+      <h1 class="m-0 mb-[25px] text-[26px] font-semibold text-[#333]">Fazer login</h1>
 
+      <form novalidate>
+        <div class="mb-[18px] flex flex-col">
+          <label class="text-[15px] mb-[5px] text-[#333] font-medium">E-mail</label>
+          <input type="email" required placeholder="Digite seu e-mail" class="px-[14px] py-3 text-[15px] border border-[#ddd] rounded-[12px] outline-none transition-[0.2s] focus:border-[#ff4d4d] focus:shadow-[0_0_0_2px_rgba(255,77,77,0.25)] max-[480px]:text-base" />
+        </div>
 
-<div class="formcard">
-<h1>Fazer login</h1>
+        <div class="mb-[18px] flex flex-col">
+          <label class="text-[15px] mb-[5px] text-[#333] font-medium">Senha</label>
+          <input type="password" required placeholder="Digite sua senha" class="px-[14px] py-3 text-[15px] border border-[#ddd] rounded-[12px] outline-none transition-[0.2s] focus:border-[#ff4d4d] focus:shadow-[0_0_0_2px_rgba(255,77,77,0.25)] max-[480px]:text-base" />
+        </div>
 
+        <button class="w-full mt-[10px] p-3 bg-[#ff4d4d] border-none cursor-pointer text-base text-white font-medium rounded-[12px] transition-[0.2s] hover:bg-[#e63636] max-[480px]:text-base">Entrar</button>
+      </form>
 
-<form novalidate>
-
-
-<div class="inp">
-<label>E-mail</label>
-<input type="email" required placeholder="Digite seu e-mail" />
-</div>
-
-
-<div class="inp">
-<label>Senha</label>
-<input type="password" required placeholder="Digite sua senha" />
-</div>
-
-
-<button class="btn">Entrar</button>
-</form>
-
-
-<p class="linklogin">Não possui uma conta? <a href="cadastro.html">Cadastrar-se</a></p>
-</div>
-
-
-</section>
-
+      <p class="mt-5 text-sm text-center">Não possui uma conta? <a href="cadastro.html" class="text-[#ff4d4d] no-underline font-medium hover:underline">Cadastrar-se</a></p>
+    </div>
+  </section>
 </body>
 </html>
