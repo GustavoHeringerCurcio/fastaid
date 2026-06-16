@@ -5,25 +5,22 @@ const telefone = document.getElementById("telefone");
 const senha = document.getElementById("senha");
 const confirmarSenha = document.getElementById("confirmarSenha");
 
-
 function setErro(input, mensagem) {
   const span = input.parentElement.querySelector(".erro");
   span.textContent = mensagem;
-  input.classList.add("input-erro");
+  input.classList.add("border-[#ff4d4d]", "shadow-[0_0_0_2px_rgba(255,77,77,0.2)]");
 }
 
 function limparErro(input) {
   const span = input.parentElement.querySelector(".erro");
   span.textContent = "";
-  input.classList.remove("input-erro");
+  input.classList.remove("border-[#ff4d4d]", "shadow-[0_0_0_2px_rgba(255,77,77,0.2)]");
 }
-
 
 form.addEventListener("submit", e => {
   e.preventDefault();
 
   let valido = true;
-
 
 if (nome.value.trim().length < 3) {
   setErro(nome, "O nome precisa ter pelo menos 3 caracteres");
