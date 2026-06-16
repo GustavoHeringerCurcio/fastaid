@@ -23,19 +23,22 @@
       <form novalidate>
         <div class="mb-[18px] flex flex-col">
           <label class="text-[15px] mb-[5px] text-[#333] font-medium">E-mail</label>
-          <input type="email" required placeholder="Digite seu e-mail" class="px-[14px] py-3 text-[15px] border border-[#ddd] rounded-[12px] outline-none transition-[0.2s] focus:border-[#ff4d4d] focus:shadow-[0_0_0_2px_rgba(255,77,77,0.25)] max-[480px]:text-base" />
+          <input type="email" id="email" required placeholder="Digite seu e-mail" class="px-[14px] py-3 text-[15px] border border-[#ddd] rounded-[12px] outline-none transition-[0.2s] focus:border-[#ff4d4d] focus:shadow-[0_0_0_2px_rgba(255,77,77,0.25)] max-[480px]:text-base" />
         </div>
 
         <div class="mb-[18px] flex flex-col">
           <label class="text-[15px] mb-[5px] text-[#333] font-medium">Senha</label>
-          <input type="password" required placeholder="Digite sua senha" class="px-[14px] py-3 text-[15px] border border-[#ddd] rounded-[12px] outline-none transition-[0.2s] focus:border-[#ff4d4d] focus:shadow-[0_0_0_2px_rgba(255,77,77,0.25)] max-[480px]:text-base" />
+          <input type="password" id="password" required placeholder="Digite sua senha" class="px-[14px] py-3 text-[15px] border border-[#ddd] rounded-[12px] outline-none transition-[0.2s] focus:border-[#ff4d4d] focus:shadow-[0_0_0_2px_rgba(255,77,77,0.25)] max-[480px]:text-base" />
         </div>
 
-        <button class="w-full mt-[10px] p-3 bg-[#ff4d4d] border-none cursor-pointer text-base text-white font-medium rounded-[12px] transition-[0.2s] hover:bg-[#e63636] max-[480px]:text-base">Entrar</button>
+        <span id="loginError" class="text-[#ff4d4d] text-[13px] block mt-2 text-center"></span>
+
+        <button type="submit" class="w-full mt-[10px] p-3 bg-[#ff4d4d] border-none cursor-pointer text-base text-white font-medium rounded-[12px] transition-[0.2s] hover:bg-[#e63636] max-[480px]:text-base">Entrar</button>
       </form>
 
       <p class="mt-5 text-sm text-center">Não possui uma conta? <a href="cadastro.html" class="text-[#ff4d4d] no-underline font-medium hover:underline">Cadastrar-se</a></p>
     </div>
   </section>
+  <script src="scripts/login.js" defer></script>
 </body>
 </html>
