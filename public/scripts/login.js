@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   if (localStorage.getItem("user")) {
-    window.location.href = "index.html";
+    window.location.href = "/";
     return;
   }
 
@@ -16,8 +16,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const email = emailInput.value.trim();
     const password = passwordInput.value.trim();
 
-    if (email !== "admin@gmail.com" || password !== "admin") {
-      errorSpan.textContent = "E-mail ou senha inválidos";
+    let resultado;
+    try {
+      const response = await fetch("/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, senha: password }),
+      });
+      resultado = await response.json();
+    } catch (err) {
+      errorSpan.textContent = "Não foi possível conectar ao servidor";
+      return;
+    }
+
+    if (!resultado.ok) {
+      errorSpan.textContent = resultado.mensagem || "E-mail ou senha inválidos";
       return;
     }
 
@@ -29,18 +42,19 @@ document.addEventListener("DOMContentLoaded", () => {
       const data = await response.json();
       profilePicture = data.results[0].picture.large;
     } catch (err) {
-      profilePicture = "images/logo.png";
+      profilePicture = "/images/logo.png";
     }
 
     localStorage.setItem(
       "user",
       JSON.stringify({
-        email,
+        email: resultado.usuario.email,
+        nome: resultado.usuario.nome,
         profilePicture,
         loggedIn: true,
       })
     );
 
-    window.location.href = "index.html";
+    window.location.href = "/";
   });
 });

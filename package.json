@@ -1,0 +1,29 @@
+{
+  "name": "fastaid",
+  "version": "1.0.0",
+  "description": "Fast Aid - aplicação de primeiros socorros em arquitetura MVC (Express + EJS)",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GustavoHeringerCurcio/fastaid.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "engines": {
+    "node": "20.x"
+  },
+  "bugs": {
+    "url": "https://github.com/GustavoHeringerCurcio/fastaid/issues"
+  },
+  "homepage": "https://github.com/GustavoHeringerCurcio/fastaid#readme",
+  "dependencies": {
+    "ejs": "^6.0.1",
+    "express": "^5.2.1"
+  }
+}

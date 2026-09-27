@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title><%= titulo %></title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-[Arial,sans-serif] text-[#222] overflow-x-hidden scroll-smooth">
+  <div class="max-w-[1400px] mx-auto p-5 max-lg:p-4 max-md:p-3 max-[480px]:p-[10px]">
+    <header class="flex justify-between items-center py-5 gap-[18px] max-md:flex-row max-md:flex-wrap max-md:items-center max-md:justify-between max-md:py-[14px] max-md:gap-3">
+      <div id="logohome" class="flex items-center gap-[10px] max-md:flex-[1_1_auto] max-md:min-w-0">
+        <a href="/">
+          <div class="flex items-center gap-[10px]">
+            <img src="/images/logo.png" alt="Logo First Aid" class="w-10 h-10 max-[480px]:w-[34px] max-[480px]:h-[34px]">
+          </div>
+        </a>
+        <p class="text-[22px] font-bold max-lg:text-[20px] max-md:text-[18px] max-[480px]:text-[18px]">Fast Aid</p>
+      </div>
+
+      <nav id="main-nav" class="flex items-center gap-5 max-md:gap-3" aria-label="Menu principal">
+        <div class="flex items-center gap-5 max-md:hidden">
+          <a href="/" class="no-underline text-[#333] text-base">Início</a>
+          <a href="#" class="no-underline text-[#333] text-base">Sobre</a>
+          <a href="#" class="no-underline text-[#333] text-base">Contato</a>
+          <a href="/cadastro" id="navCadastro" class="ml-auto bg-[#ff4d4d] text-white px-[14px] py-2 rounded-[8px] no-underline text-base">Cadastrar-se</a>
+          <a href="/login" id="navLogin" class="no-underline text-[#333] text-base">Fazer login</a>
+        </div>
+        <div id="navProfile" class="hidden relative max-md:hidden">
+          <button id="profileTrigger" class="flex items-center gap-2 cursor-pointer bg-transparent border-none p-0">
+            <img id="profilePic" src="" alt="Foto de perfil" class="w-9 h-9 rounded-full object-cover border-2 border-[#ff4d4d] hover:opacity-80 transition-opacity">
+            <svg class="w-4 h-4 text-[#333] transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div id="profileDropdown" class="hidden absolute right-0 top-full mt-2 w-56 bg-white rounded-[12px] shadow-[0_8px_24px_rgba(0,0,0,0.12)] border border-[#eee] py-2 z-50">
+            <div class="px-4 py-2 text-sm text-[#555] border-b border-[#eee]" id="profileEmail"></div>
+            <button id="logoutBtn" class="w-full text-left px-4 py-2 text-sm text-[#ff4d4d] hover:bg-[#fff5f5] transition-colors flex items-center gap-2 cursor-pointer bg-transparent border-none">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
+              </svg>
+              Sair
+            </button>
+          </div>
+        </div>
+        <button id="mobileMenuBtn" class="hidden max-md:flex flex-col gap-[4px] p-1 bg-transparent border-none cursor-pointer" aria-label="Abrir menu">
+          <span class="block w-6 h-[2.5px] bg-[#333] rounded-full"></span>
+          <span class="block w-6 h-[2.5px] bg-[#333] rounded-full"></span>
+          <span class="block w-6 h-[2.5px] bg-[#333] rounded-full"></span>
+        </button>
+      </nav>
+    </header>
+
+    <div id="mobileMenu" class="hidden fixed inset-0 z-50">
+      <div id="mobileMenuBackdrop" class="absolute inset-0 bg-black/50"></div>
+      <div class="absolute top-0 right-0 w-[280px] h-full bg-white shadow-lg p-6 pt-16">
+        <button id="mobileMenuClose" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center bg-transparent border-none cursor-pointer">
+          <svg class="w-6 h-6 text-[#333]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+        <div class="flex flex-col gap-4">
+          <a href="/" class="no-underline text-[#333] text-base py-2 border-b border-[#eee]">Início</a>
+          <a href="#" class="no-underline text-[#333] text-base py-2 border-b border-[#eee]">Sobre</a>
+          <a href="#" class="no-underline text-[#333] text-base py-2 border-b border-[#eee]">Contato</a>
+          <a href="/cadastro" id="navCadastroMobile" class="bg-[#ff4d4d] text-white px-[14px] py-[10px] rounded-[8px] no-underline text-base text-center mt-2">Cadastrar-se</a>
+          <a href="/login" id="navLoginMobile" class="no-underline text-[#333] text-base py-2 text-center">Fazer login</a>
+          <div id="navProfileMobile" class="hidden flex-col gap-3 pt-4 mt-4 border-t border-[#eee]">
+            <div class="flex items-center gap-3 px-1">
+              <img id="profilePicMobile" src="" alt="" class="w-10 h-10 rounded-full object-cover border-2 border-[#ff4d4d]">
+              <span id="profileEmailMobile" class="text-sm text-[#555] truncate"></span>
+            </div>
+            <button id="logoutBtnMobile" class="w-full text-left px-3 py-2.5 text-sm text-[#ff4d4d] hover:bg-[#fff5f5] rounded-[8px] flex items-center gap-2 cursor-pointer bg-transparent border-none">
+              <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
+              </svg>
+              Sair
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
