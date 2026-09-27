@@ -1,0 +1,55 @@
+<%- include('partials/head', { titulo }) %>
+
+    <main>
+      <section class="flex items-center justify-between py-[60px] gap-[30px] max-lg:flex-col max-lg:items-start max-lg:py-[45px] max-md:py-[30px] max-md:gap-5" aria-labelledby="hero-heading">
+        <div class="w-1/2 max-lg:w-full">
+          <h1 id="hero-heading" class="text-[52px] leading-[1.1] my-5 max-lg:text-[40px] max-md:text-[32px] max-[480px]:text-[26px]">Aprenda primeiros socorros</h1>
+          <p class="text-lg text-[#444] mb-[22px] max-w-[400px] max-lg:max-w-none max-lg:text-[17px] max-md:text-base">Informações acessíveis sobre como agir em situações de emergência — passo a passo, recursos visuais e consulta rápida.</p>
+          <a class="inline-block bg-[#ff4d4d] text-white px-[22px] py-[14px] rounded-[10px] no-underline text-lg max-md:text-base max-md:px-[18px] max-md:py-3 max-[480px]:w-full max-[480px]:text-center" href="#emergencias">Saiba mais ›</a>
+        </div>
+
+        <div class="max-lg:w-full max-lg:flex max-lg:justify-center">
+          <img src="/images/imagemrcp.png" alt="pessoa realizando rcp" class="w-[580px] max-w-full max-lg:w-[min(580px,100%)]">
+        </div>
+      </section>
+
+      <section id="emergencias" class="py-[60px] max-md:py-10">
+        <h2 class="text-[32px] mb-6 max-md:text-[26px]">Emergências em Destaque</h2>
+
+        <div class="grid grid-cols-4 gap-5 mb-10 max-lg:grid-cols-2 max-md:grid-cols-1 max-md:gap-[14px] max-md:justify-items-center">
+          <% emergencias.forEach((e) => { %>
+          <article class="bg-white rounded-[12px] p-5 border border-[#eee] text-left transition-[0.25s_ease] cursor-pointer max-lg:w-full max-md:w-full max-md:max-w-[360px] max-md:text-center max-[480px]:p-4 hover:-translate-y-[6px] hover:shadow-[0_10px_25px_rgba(0,0,0,0.08)]">
+            <img class="w-[55px] text-[30px] mb-[10px] max-md:mx-auto max-md:mb-[10px]" src="<%= e.icone %>" alt="">
+            <h3 class="text-[20px] mb-[6px]"><%= e.nome %></h3>
+            <a href="<%= e.rota %>" class="text-[15px] text-[#ff4d4d] no-underline">Ver mais</a>
+          </article>
+          <% }); %>
+        </div>
+
+        <div class="mt-9">
+          <h2 class="text-[32px] mb-6 max-md:text-[26px]">Como funciona?</h2>
+          <div class="flex gap-10 mt-5 flex-wrap justify-center max-lg:gap-5 max-md:flex-col max-md:gap-4">
+            <div class="text-center w-[180px] max-lg:w-[calc(50%-10px)] max-lg:min-w-[220px] max-md:w-full max-md:min-w-0">
+              <div class="w-[42px] h-[42px] bg-[#ff4d4d] text-white rounded-full flex items-center justify-center mx-auto mb-[10px] font-bold text-lg">1</div>
+              <strong>Escolha a emergência</strong>
+              <div>Selecione o tipo de incidente</div>
+            </div>
+
+            <div class="text-center w-[180px] max-lg:w-[calc(50%-10px)] max-lg:min-w-[220px] max-md:w-full max-md:min-w-0">
+              <div class="w-[42px] h-[42px] bg-[#ff4d4d] text-white rounded-full flex items-center justify-center mx-auto mb-[10px] font-bold text-lg">2</div>
+              <strong>Veja as instruções</strong>
+              <div>Passo a passo claro e direto</div>
+            </div>
+
+            <div class="text-center w-[180px] max-lg:w-[calc(50%-10px)] max-lg:min-w-[220px] max-md:w-full max-md:min-w-0">
+              <div class="w-[42px] h-[42px] bg-[#ff4d4d] text-white rounded-full flex items-center justify-center mx-auto mb-[10px] font-bold text-lg">3</div>
+              <strong>Salve vidas</strong>
+              <div>Aja rápido e com segurança</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+<%- include('partials/footer') %>
+<%- include('partials/foot') %>

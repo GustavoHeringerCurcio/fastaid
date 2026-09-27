@@ -1,0 +1,24 @@
+<%- include('partials/head', { titulo }) %>
+
+    <div class="text-center mt-[25px] mb-[10px] flex justify-center items-center">
+      <img src="<%= conteudo.icone %>" class="w-[120px] m-[30px] -mb-5 max-md:w-[95px] max-md:m-[22px] max-md:-mb-[10px]" alt="<%= conteudo.titulo %>">
+    </div>
+
+    <section class="max-w-[900px] mx-auto py-10 px-5 text-center max-md:py-[30px] max-md:px-3">
+      <h1 class="text-[32px] mb-[10px] max-lg:text-[27px] max-md:text-2xl"><%= conteudo.titulo %></h1>
+      <p class="text-base mb-[35px] text-[#555] max-md:text-[15px] max-md:mb-[22px]">Siga o passo a passo abaixo:</p>
+
+      <div class="flex flex-col gap-[22px] max-md:gap-4">
+        <% conteudo.passos.forEach((passo) => { %>
+        <div class="bg-white rounded-[12px] p-[18px] shadow-[0_4px_12px_rgba(0,0,0,0.08)] text-left flex gap-5 items-center max-md:flex-col max-md:items-center max-md:text-center max-md:gap-3 max-md:p-4">
+          <img src="<%= passo.imagem %>" class="w-20 max-md:w-[90px] max-[480px]:w-[76px]" alt="<%= passo.alt %>">
+          <div>
+            <h3 class="text-[20px] mb-[6px]"><%= passo.titulo %></h3>
+            <p class="text-[#444]"><%- passo.texto %></p>
+          </div>
+        </div>
+        <% }); %>
+      </div>
+    </section>
+
+<%- include('partials/foot') %>

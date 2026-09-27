@@ -1,0 +1,16 @@
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var btn = document.getElementById('mobileMenuBtn');
+      var menu = document.getElementById('mobileMenu');
+      var close = document.getElementById('mobileMenuClose');
+      var backdrop = document.getElementById('mobileMenuBackdrop');
+      if (!btn || !menu) return;
+      btn.addEventListener('click', function() { menu.classList.remove('hidden'); });
+      if (close) close.addEventListener('click', function() { menu.classList.add('hidden'); });
+      if (backdrop) backdrop.addEventListener('click', function() { menu.classList.add('hidden'); });
+    });
+  </script>
+  <script src="/scripts/auth.js" defer></script>
+</body>
+</html>
