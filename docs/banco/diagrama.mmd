@@ -1,0 +1,30 @@
+%% Fast Aid — MER (Mermaid erDiagram)
+%% Renderiza automaticamente no GitHub e em editores com suporte a Mermaid.
+
+erDiagram
+    USUARIO {
+        int     id        PK
+        varchar nome
+        varchar email     UK
+        varchar senha
+        varchar telefone
+    }
+
+    EMERGENCIA {
+        int     id        PK
+        varchar titulo
+        text    descricao
+        varchar icone
+    }
+
+    PASSO_EMERGENCIA {
+        int     id            PK
+        int     emergencia_id FK
+        int     numero_passo
+        text    instrucao
+        varchar imagem
+        varchar alt
+        varchar titulo
+    }
+
+    EMERGENCIA ||--o{ PASSO_EMERGENCIA : "possui"

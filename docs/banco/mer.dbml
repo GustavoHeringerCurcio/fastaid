@@ -1,0 +1,40 @@
+// Fast Aid — Modelo Entidade Relacionamento (BDI — Ticket 4)
+// Cole este conteúdo em https://dbdiagram.io para visualizar e exportar
+// o diagrama em PNG / SVG / PDF (botão "Export" no canto superior direito).
+
+Table Usuario {
+  id        integer [pk, increment]
+  nome      varchar(120) [not null]
+  email     varchar(160) [not null, unique]
+  senha     varchar(255) [not null, note: 'armazenar hash, nunca texto puro']
+  telefone  varchar(20)
+
+  Note: 'Usuário cadastrado no app. Sem relacionamento no escopo deste ticket.'
+}
+
+Table Emergencia {
+  id         integer [pk, increment]
+  titulo     varchar(120) [not null]
+  descricao  text
+  icone      varchar(255) [note: 'caminho/referência do ícone ou imagem']
+}
+
+Table Passo_Emergencia {
+  id             integer [pk, increment]
+  emergencia_id  integer [not null]
+  numero_passo   integer [not null]
+  instrucao      text [not null]
+  imagem         varchar(255)
+  alt            varchar(160)
+  titulo         varchar(160)
+
+  Note: 'Campo instrucao corresponde ao texto do passo. imagem/alt/titulo mantidos porque o app atual os utiliza.'
+
+  indexes {
+    (emergencia_id, numero_passo) [unique]
+  }
+}
+
+// Relacionamento: uma Emergencia possui zero ou muitos Passo_Emergencia.
+// Cada Passo_Emergencia pertence a exatamente uma Emergencia.
+Ref: Emergencia.id < Passo_Emergencia.emergencia_id
