@@ -4,6 +4,7 @@ const emergencias = [
     nome: "RCP",
     titulo: "RCP – Reanimação Cardiopulmonar",
     icone: "/images/rcp.png",
+    categoria: "Respiração",
     passos: [
       {
         imagem: "/images/rcp1.png",
@@ -21,7 +22,8 @@ const emergencias = [
       {
         imagem: "/images/rcp3.png",
         alt: "Abrir vias aéreas",
-        titulo: "3. Abra as vias aéreas e verifique se a pessoa está respirando",
+        titulo:
+          "3. Abra as vias aéreas e verifique se a pessoa está respirando",
         texto:
           "Incline a cabeça para trás e levante o queixo delicadamente. Observe o peito, aproxime o ouvido e sinta a respiração por no máximo 10 segundos.",
       },
@@ -43,15 +45,18 @@ const emergencias = [
         imagem: "/images/rcp6.png",
         alt: "Uso de DEA",
         titulo: "6. Use o DEA se houver",
-        texto: "Siga as instruções do aparelho. Ele dirá quando aplicar o choque.",
+        texto:
+          "Siga as instruções do aparelho. Ele dirá quando aplicar o choque.",
       },
     ],
   },
+
   {
     id: "convulsao",
     nome: "Convulsão",
     titulo: "Convulsão",
     icone: "/images/convulsao.png",
+    categoria: "Outros",
     passos: [
       {
         imagem: "/images/convulsao1.png",
@@ -64,64 +69,117 @@ const emergencias = [
         imagem: "/images/convulsao2.png",
         alt: "",
         titulo: "2. Proteja a pessoa",
-        texto: "Afaste objetos ao redor para evitar que a pessoa se machuque.",
+        texto:
+          "Afaste objetos ao redor para evitar que a pessoa se machuque.",
       },
       {
         imagem: "/images/convulsao3.png",
         alt: "",
         titulo: "3. Apoie a cabeça",
-        texto: "Coloque algo macio sob a cabeça da pessoa para evitar impactos.",
+        texto:
+          "Coloque algo macio sob a cabeça da pessoa para evitar impactos.",
       },
       {
         imagem: "/images/convulsao4.png",
         alt: "",
         titulo: "4. Não segure a pessoa",
-        texto: "Não tente impedir os movimentos. Isso pode causar lesões.",
+        texto:
+          "Não tente impedir os movimentos. Isso pode causar lesões.",
       },
       {
         imagem: "/images/convulsao5.png",
         alt: "",
         titulo: "5. Não coloque nada na boca",
-        texto: "Nunca coloque objetos ou dedos na boca da pessoa.",
+        texto:
+          "Nunca coloque objetos ou dedos na boca da pessoa.",
       },
       {
         imagem: "/images/convulsao6.png",
         alt: "",
         titulo: "6. Após a convulsão",
-        texto: "Coloque a pessoa de lado (posição lateral) e verifique a respiração.",
+        texto:
+          "Coloque a pessoa de lado (posição lateral) e verifique a respiração.",
       },
       {
         imagem: "/images/convulsao7.png",
         alt: "",
         titulo: "7. Chame ajuda se necessário",
-        texto: "Ligue 192 se a convulsão durar mais de 5 minutos ou se for a primeira vez.",
+        texto:
+          "Ligue 192 se a convulsão durar mais de 5 minutos ou se for a primeira vez.",
       },
     ],
   },
-  { id: "queimaduras", nome: "Queimaduras", icone: "/images/queimadura.png", passos: [] },
-  { id: "traumas", nome: "Traumas", icone: "/images/traumas.png", passos: [] },
+
+  {
+    id: "queimaduras",
+    nome: "Queimaduras",
+    icone: "/images/queimadura.png",
+    categoria: "Ferimentos",
+    passos: [],
+  },
+
+  {
+    id: "traumas",
+    nome: "Traumas",
+    icone: "/images/traumas.png",
+    categoria: "Traumas",
+    passos: [],
+  },
+
   {
     id: "cortes",
     nome: "Cortes e Sangramentos",
     icone: "/images/cortesesangramentos.png",
+    categoria: "Ferimentos",
     passos: [],
   },
-  { id: "choque", nome: "Choque Elétrico", icone: "/images/choqueeletrico.png", passos: [] },
-  { id: "afogamento", nome: "Afogamento", icone: "/images/afogamento.png", passos: [] },
-  { id: "desmaio", nome: "Desmaio", icone: "/images/desmaio.png", passos: [] },
+
+  {
+    id: "choque",
+    nome: "Choque Elétrico",
+    icone: "/images/choqueeletrico.png",
+    categoria: "Outros",
+    passos: [],
+  },
+
+  {
+    id: "afogamento",
+    nome: "Afogamento",
+    icone: "/images/afogamento.png",
+    categoria: "Respiração",
+    passos: [],
+  },
+
+  {
+    id: "desmaio",
+    nome: "Desmaio",
+    icone: "/images/desmaio.png",
+    categoria: "Outros",
+    passos: [],
+  },
 ];
+
 
 function listar() {
   return emergencias.map((e) => ({
     nome: e.nome,
     icone: e.icone,
+    categoria: e.categoria,
     rota: e.passos.length > 0 ? `/${e.id}` : "#",
   }));
 }
 
+
 function obterPorSlug(slug) {
   const emergencia = emergencias.find((e) => e.id === slug);
-  return emergencia && emergencia.passos.length > 0 ? emergencia : null;
+
+  return emergencia && emergencia.passos.length > 0
+    ? emergencia
+    : null;
 }
 
-module.exports = { listar, obterPorSlug };
+
+module.exports = {
+  listar,
+  obterPorSlug,
+};

@@ -1,55 +1,426 @@
 <%- include('partials/head', { titulo }) %>
 
-    <main>
-      <section class="flex items-center justify-between py-[60px] gap-[30px] max-lg:flex-col max-lg:items-start max-lg:py-[45px] max-md:py-[30px] max-md:gap-5" aria-labelledby="hero-heading">
-        <div class="w-1/2 max-lg:w-full">
-          <h1 id="hero-heading" class="text-[52px] leading-[1.1] my-5 max-lg:text-[40px] max-md:text-[32px] max-[480px]:text-[26px]">Aprenda primeiros socorros</h1>
-          <p class="text-lg text-[#444] mb-[22px] max-w-[400px] max-lg:max-w-none max-lg:text-[17px] max-md:text-base">Informações acessíveis sobre como agir em situações de emergência — passo a passo, recursos visuais e consulta rápida.</p>
-          <a class="inline-block bg-[#ff4d4d] text-white px-[22px] py-[14px] rounded-[10px] no-underline text-lg max-md:text-base max-md:px-[18px] max-md:py-3 max-[480px]:w-full max-[480px]:text-center" href="#emergencias">Saiba mais ›</a>
-        </div>
+<main>
 
-        <div class="max-lg:w-full max-lg:flex max-lg:justify-center">
-          <img src="/images/imagemrcp.png" alt="pessoa realizando rcp" class="w-[580px] max-w-full max-lg:w-[min(580px,100%)]">
-        </div>
-      </section>
+  <!-- HERO -->
+  <section
+    class="flex items-center justify-between py-[60px] gap-[30px] max-lg:flex-col max-lg:items-start max-lg:py-[45px] max-md:py-[30px] max-md:gap-5"
+    aria-labelledby="hero-heading"
+  >
 
-      <section id="emergencias" class="py-[60px] max-md:py-10">
-        <h2 class="text-[32px] mb-6 max-md:text-[26px]">Emergências em Destaque</h2>
+    <div class="w-1/2 max-lg:w-full">
 
-        <div class="grid grid-cols-4 gap-5 mb-10 max-lg:grid-cols-2 max-md:grid-cols-1 max-md:gap-[14px] max-md:justify-items-center">
-          <% emergencias.forEach((e) => { %>
-          <article class="bg-white rounded-[12px] p-5 border border-[#eee] text-left transition-[0.25s_ease] cursor-pointer max-lg:w-full max-md:w-full max-md:max-w-[360px] max-md:text-center max-[480px]:p-4 hover:-translate-y-[6px] hover:shadow-[0_10px_25px_rgba(0,0,0,0.08)]">
-            <img class="w-[55px] text-[30px] mb-[10px] max-md:mx-auto max-md:mb-[10px]" src="<%= e.icone %>" alt="">
-            <h3 class="text-[20px] mb-[6px]"><%= e.nome %></h3>
-            <a href="<%= e.rota %>" class="text-[15px] text-[#ff4d4d] no-underline">Ver mais</a>
-          </article>
-          <% }); %>
-        </div>
+      <h1
+        id="hero-heading"
+        class="text-[52px] leading-[1.1] my-5 max-lg:text-[40px] max-md:text-[32px] max-[480px]:text-[26px]"
+      >
+        Aprenda primeiros socorros
+      </h1>
 
-        <div class="mt-9">
-          <h2 class="text-[32px] mb-6 max-md:text-[26px]">Como funciona?</h2>
-          <div class="flex gap-10 mt-5 flex-wrap justify-center max-lg:gap-5 max-md:flex-col max-md:gap-4">
-            <div class="text-center w-[180px] max-lg:w-[calc(50%-10px)] max-lg:min-w-[220px] max-md:w-full max-md:min-w-0">
-              <div class="w-[42px] h-[42px] bg-[#ff4d4d] text-white rounded-full flex items-center justify-center mx-auto mb-[10px] font-bold text-lg">1</div>
-              <strong>Escolha a emergência</strong>
-              <div>Selecione o tipo de incidente</div>
-            </div>
+      <p
+        class="text-lg text-[#444] mb-[22px] max-w-[400px] max-lg:max-w-none max-lg:text-[17px] max-md:text-base"
+      >
+        Informações acessíveis sobre como agir em situações de emergência —
+        passo a passo, recursos visuais e consulta rápida.
+      </p>
 
-            <div class="text-center w-[180px] max-lg:w-[calc(50%-10px)] max-lg:min-w-[220px] max-md:w-full max-md:min-w-0">
-              <div class="w-[42px] h-[42px] bg-[#ff4d4d] text-white rounded-full flex items-center justify-center mx-auto mb-[10px] font-bold text-lg">2</div>
-              <strong>Veja as instruções</strong>
-              <div>Passo a passo claro e direto</div>
-            </div>
+      <a
+        class="inline-block bg-[#ff4d4d] text-white px-[22px] py-[14px] rounded-[10px] no-underline text-lg max-md:text-base max-md:px-[18px] max-md:py-3 max-[480px]:w-full max-[480px]:text-center"
+        href="#emergencias"
+      >
+        Saiba mais →
+      </a>
 
-            <div class="text-center w-[180px] max-lg:w-[calc(50%-10px)] max-lg:min-w-[220px] max-md:w-full max-md:min-w-0">
-              <div class="w-[42px] h-[42px] bg-[#ff4d4d] text-white rounded-full flex items-center justify-center mx-auto mb-[10px] font-bold text-lg">3</div>
-              <strong>Salve vidas</strong>
-              <div>Aja rápido e com segurança</div>
-            </div>
+    </div>
+
+    <div class="max-lg:w-full max-lg:flex max-lg:justify-center">
+
+      <img
+        src="/images/imagemrcp.png"
+        alt="Pessoa realizando RCP"
+        class="w-[580px] max-w-full max-lg:w-[min(580px,100%)]"
+      >
+
+    </div>
+
+  </section>
+
+
+  <!-- EMERGÊNCIAS -->
+  <section id="emergencias" class="py-[60px] max-md:py-10">
+
+    <h2 class="text-[32px] mb-2 max-md:text-[26px]">
+      Emergências em Destaque
+    </h2>
+
+    <p class="text-[#666] mb-6">
+      Encontre rapidamente a orientação que você precisa.
+    </p>
+
+
+    <!-- FILTROS -->
+    <div class="flex gap-4 items-center mb-8 max-md:flex-col">
+
+      <!-- PESQUISA -->
+      <div class="relative flex-1 w-full">
+
+        <span
+          class="absolute left-4 top-1/2 -translate-y-1/2 text-[#999] text-lg"
+        >
+          🔎
+        </span>
+
+        <input
+          id="buscaEmergencia"
+          type="text"
+          placeholder="Pesquisar emergência..."
+          aria-label="Pesquisar emergência"
+          class="w-full border border-[#ddd] rounded-[10px] pl-11 pr-4 py-[13px] outline-none transition focus:border-[#ff4d4d] focus:ring-2 focus:ring-[#ff4d4d]/10"
+        >
+
+      </div>
+
+
+      <!-- CATEGORIA -->
+      <div class="w-[220px] max-md:w-full">
+
+        <select
+          id="filtroCategoria"
+          aria-label="Filtrar por categoria"
+          class="w-full border border-[#ddd] rounded-[10px] px-4 py-[13px] bg-white outline-none cursor-pointer transition focus:border-[#ff4d4d] focus:ring-2 focus:ring-[#ff4d4d]/10"
+        >
+
+          <option value="todas">
+            Todas as categorias
+          </option>
+
+          <option value="Ferimentos">
+            Ferimentos
+          </option>
+
+          <option value="Respiração">
+            Respiração
+          </option>
+
+          <option value="Traumas">
+            Traumas
+          </option>
+
+          <option value="Outros">
+            Outros
+          </option>
+
+        </select>
+
+      </div>
+
+    </div>
+
+
+    <!-- CONTADOR -->
+    <div class="flex justify-between items-center mb-5">
+
+      <span
+        id="contadorEmergencias"
+        class="text-sm text-[#777]"
+      >
+        Mostrando emergências
+      </span>
+
+    </div>
+
+
+    <!-- CARDS -->
+    <div
+      id="listaEmergencias"
+      class="grid grid-cols-4 gap-5 mb-10 max-lg:grid-cols-2 max-md:grid-cols-1 max-md:gap-[14px] max-md:justify-items-center"
+    >
+
+      <% emergencias.forEach((e) => { %>
+
+        <article
+          class="card-emergencia bg-white rounded-[12px] p-5 border border-[#eee] text-left transition-all duration-300 cursor-pointer max-lg:w-full max-md:w-full max-md:max-w-[360px] max-md:text-center max-[480px]:p-4 hover:-translate-y-[6px] hover:shadow-[0_10px_25px_rgba(0,0,0,0.08)]"
+          data-nome="<%= e.nome.toLowerCase() %>"
+          data-categoria="<%= e.categoria %>"
+        >
+
+          <img
+            class="w-[55px] h-[55px] object-contain text-[30px] mb-[10px] max-md:mx-auto max-md:mb-[10px]"
+            src="<%= e.icone %>"
+            alt=""
+          >
+
+          <div class="flex items-center justify-between gap-2 max-md:justify-center">
+
+            <h3 class="text-[20px] mb-[6px]">
+              <%= e.nome %>
+            </h3>
+
           </div>
+
+
+          <!-- CATEGORIA -->
+          <span
+            class="inline-block text-xs bg-[#fff0f0] text-[#ff4d4d] px-2 py-1 rounded-full mb-3"
+          >
+            <%= e.categoria %>
+          </span>
+
+          <br>
+
+          <a
+            href="<%= e.rota %>"
+            class="text-[15px] text-[#ff4d4d] no-underline font-medium hover:underline"
+          >
+            Ver mais →
+          </a>
+
+        </article>
+
+      <% }); %>
+
+
+      <!-- NENHUM RESULTADO -->
+      <div
+        id="semResultado"
+        class="hidden col-span-4 max-lg:col-span-2 max-md:col-span-1 text-center py-12"
+      >
+
+        <div class="text-4xl mb-3">
+          🔎
         </div>
-      </section>
-    </main>
+
+        <h3 class="text-xl font-semibold mb-2">
+          Nenhuma emergência encontrada
+        </h3>
+
+        <p class="text-[#777]">
+          Tente pesquisar por outro termo ou alterar a categoria.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- COMO FUNCIONA -->
+<!-- COMO FUNCIONA -->
+<section class="mt-20 pt-16 pb-10 border-t border-[#eee]">
+
+  <div class="text-center max-w-[800px] mx-auto mb-14">
+
+  
+    <h2
+      class="text-[42px] leading-tight font-semibold mb-5 max-md:text-[32px]"
+    >
+      Como funciona?
+    </h2>
+
+    <p
+      class="text-[#666] text-[18px] leading-relaxed max-w-[680px] mx-auto max-md:text-base"
+    >
+      Encontre informações de primeiros socorros de forma rápida,
+      simples e organizada para saber como agir diante de diferentes
+      situações de emergência.
+    </p>
+
+  </div>
+
+
+  <!-- ETAPAS -->
+
+  <!-- ETAPAS -->
+  <div class="grid grid-cols-3 gap-6 max-lg:grid-cols-1 max-lg:max-w-[600px] max-lg:mx-auto">
+
+    <!-- ETAPA 1 -->
+    <div
+      class="relative bg-white border border-[#eee] rounded-[16px] p-7 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.07)]"
+    >
+
+      <div
+        class="w-[58px] h-[58px] mx-auto mb-5 rounded-full bg-[#fff0f0] text-[#ff4d4d] flex items-center justify-center text-xl font-bold"
+      >
+        1
+      </div>
+
+      <h3 class="text-[21px] font-semibold mb-3">
+        Escolha a emergência
+      </h3>
+
+      <p class="text-[#666] leading-relaxed mb-5">
+        Encontre rapidamente a situação que está acontecendo, como uma
+        convulsão, parada cardiorrespiratória ou outro tipo de emergência.
+      </p>
+
+      <div class="text-sm text-[#888]">
+        <span class="font-medium text-[#555]">
+          Consulta rápida
+        </span>
+        <br>
+        Encontre a orientação em poucos segundos.
+      </div>
+
+    </div>
+
+
+    <!-- ETAPA 2 -->
+    <div
+      class="relative bg-white border border-[#eee] rounded-[16px] p-7 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.07)]"
+    >
+
+      <div
+        class="w-[58px] h-[58px] mx-auto mb-5 rounded-full bg-[#fff0f0] text-[#ff4d4d] flex items-center justify-center text-xl font-bold"
+      >
+        2
+      </div>
+
+      <h3 class="text-[21px] font-semibold mb-3">
+        Siga o passo a passo
+      </h3>
+
+      <p class="text-[#666] leading-relaxed mb-5">
+        Veja instruções organizadas de forma clara, acompanhadas de recursos
+        visuais para facilitar a compreensão de cada procedimento.
+      </p>
+
+      <div class="text-sm text-[#888]">
+        <span class="font-medium text-[#555]">
+          Orientação simples
+        </span>
+        <br>
+        Informações diretas e fáceis de acompanhar.
+      </div>
+
+    </div>
+
+
+    <!-- ETAPA 3 -->
+    <div
+      class="relative bg-white border border-[#eee] rounded-[16px] p-7 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.07)]"
+    >
+
+      <div
+        class="w-[58px] h-[58px] mx-auto mb-5 rounded-full bg-[#fff0f0] text-[#ff4d4d] flex items-center justify-center text-xl font-bold"
+      >
+        3
+      </div>
+
+      <h3 class="text-[21px] font-semibold mb-3">
+        Aja com segurança
+      </h3>
+
+      <p class="text-[#666] leading-relaxed mb-5">
+        Utilize as informações para agir de maneira mais segura enquanto
+        aguarda, quando necessário, a chegada do atendimento especializado.
+      </p>
+
+      <div class="text-sm text-[#888]">
+        <span class="font-medium text-[#555]">
+          Priorize a segurança
+        </span>
+        <br>
+        Em situações graves, procure ajuda profissional.
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- DESTAQUE FINAL -->
+  <div
+    class="mt-8 bg-[#fff7f7] border border-[#ffe1e1] rounded-[16px] px-7 py-5 flex items-center gap-4 max-md:flex-col max-md:text-center"
+  >
+
+    <div
+      class="w-[46px] h-[46px] shrink-0 rounded-full bg-[#ff4d4d] text-white flex items-center justify-center text-xl"
+    >
+      !
+    </div>
+
+    <div>
+
+      <h3 class="font-semibold text-[17px] mb-1">
+        Importante
+      </h3>
+
+      <p class="text-sm text-[#666] leading-relaxed">
+        O Fast Aid é uma plataforma de orientação e educação em primeiros
+        socorros. Em situações graves ou que ofereçam risco à vida, acione
+        o serviço de emergência rapidamente se necessário.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
 
 <%- include('partials/footer') %>
+
 <%- include('partials/foot') %>
+
+
+<!-- FILTRO -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const busca = document.getElementById("buscaEmergencia");
+    const categoria = document.getElementById("filtroCategoria");
+    const cards = document.querySelectorAll(".card-emergencia");
+    const semResultado = document.getElementById("semResultado");
+    const contador = document.getElementById("contadorEmergencias");
+
+    function filtrarEmergencias() {
+      const texto = busca.value
+        .toLowerCase()
+        .trim();
+
+      const categoriaSelecionada = categoria.value;
+
+      let encontrados = 0;
+
+      cards.forEach(function (card) {
+        const nome = (card.dataset.nome || "").toLowerCase();
+        const categoriaCard = card.dataset.categoria || "";
+
+        const correspondeNome =
+          nome.includes(texto);
+
+        const correspondeCategoria =
+          categoriaSelecionada === "todas" ||
+          categoriaCard === categoriaSelecionada;
+
+        const mostrar =
+          correspondeNome && correspondeCategoria;
+
+        if (mostrar) {
+          card.style.display = "";
+          encontrados++;
+        } else {
+          card.style.display = "none";
+        }
+      });
+
+      if (encontrados === 0) {
+        semResultado.style.display = "block";
+      } else {
+        semResultado.style.display = "none";
+      }
+
+      if (encontrados === 1) {
+        contador.textContent = "1 emergência encontrada";
+      } else {
+        contador.textContent =
+          encontrados + " emergências encontradas";
+      }
+    }
+
+    busca.addEventListener("input", filtrarEmergencias);
+    categoria.addEventListener("change", filtrarEmergencias);
+
+    filtrarEmergencias();
+  });
+</script>
